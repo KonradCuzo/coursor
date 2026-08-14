@@ -19,3 +19,4 @@ Analiza Specyfikacji Warunków Zamówienia, zmian, wyjaśnień i dokumentów ofe
 2. [MACIERZ-ZGODNOSCI.md](MACIERZ-ZGODNOSCI.md) — wymaganie SWZ vs zaoferowany asortyment
 3. [CHECKLISTA-DOSTAWY.md](CHECKLISTA-DOSTAWY.md) — co przygotować na odbiór w Głogowie
 4. [INWENTARZ.md](INWENTARZ.md) — spis plików źródłowych przekazanych do analizy
+5. [OPINIA-BNR-POLSKA.md](OPINIA-BNR-POLSKA.md) — ocena oferty BNR z pozycji drugiego (CUZO) i plan KIO / pisma do Głogowa
