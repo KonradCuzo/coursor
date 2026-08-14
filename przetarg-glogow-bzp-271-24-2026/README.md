@@ -20,3 +20,4 @@ Analiza Specyfikacji Warunków Zamówienia, zmian, wyjaśnień i dokumentów ofe
 3. [CHECKLISTA-DOSTAWY.md](CHECKLISTA-DOSTAWY.md) — co przygotować na odbiór w Głogowie
 4. [INWENTARZ.md](INWENTARZ.md) — spis plików źródłowych przekazanych do analizy
 5. [OPINIA-BNR-POLSKA.md](OPINIA-BNR-POLSKA.md) — ocena oferty BNR z pozycji drugiego (CUZO) i plan KIO / pisma do Głogowa
+6. [Pismo-Glogow-odrzucenie-BNR-wybor-CUZO.docx](Pismo-Glogow-odrzucenie-BNR-wybor-CUZO.docx) — wniosek do Gminy o odrzucenie BNR i wybór CUZO (wysłać 14.08.2026)
