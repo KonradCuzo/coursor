@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elektrostatyk — propozycja katalogu TEREN 2026/27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #3f5342;
+      --green-deep: #243028;
+      --ink: #141814;
+      --paper: #e2e7e0;
+      --muted: #5a655c;
+      --line: #b4beb3;
+      --white: #f2f4f0;
+      --signal: #a9441f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Barlow", system-ui, sans-serif;
+      background: #171c18;
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    .deck {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .intro {
+      color: var(--paper);
+      margin-bottom: 36px;
+      max-width: 660px;
+    }
+    .intro .eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9aab9c;
+      margin-bottom: 12px;
+    }
+    .intro h1 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
+    .intro p {
+      font-size: 16px;
+      line-height: 1.45;
+      color: #c5d0c6;
+      max-width: 54ch;
+    }
+    .intro .diffs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .intro .diffs span {
+      border: 1px solid #4a5a4c;
+      color: #d2ddd3;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      padding: 6px 10px;
+      letter-spacing: 0.04em;
+    }
+    .intro a.open {
+      display: inline-block;
+      margin-top: 18px;
+      color: #d7e3d8;
+      font-size: 14px;
+    }
+
+    .pages {
+      display: grid;
+      gap: 28px;
+      justify-items: center;
+    }
+
+    .page {
+      width: min(100%, 794px);
+      aspect-ratio: 210 / 297;
+      background: var(--paper);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,.45);
+    }
+    .page-label {
+      width: min(100%, 794px);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      color: #9aab9c;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .wrap { width: min(100%, 794px); }
+
+    /* ========== COVER ========== */
+    .cover {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background:
+        linear-gradient(180deg, #ecefe8 0%, #d5dccf 55%, #c3ccbc 100%);
+    }
+    .cover-top {
+      padding: 26px 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .brand-lockup img {
+      height: 34px;
+      width: auto;
+      color: var(--green-deep);
+    }
+    .season {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.45;
+    }
+    .season strong {
+      display: block;
+      color: var(--ink);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .cover-hero {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: stretch;
+      min-height: 0;
+      padding: 8px 0 0 30px;
+    }
+    .cover-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 24px 12px 28px 0;
+    }
+    .cover-copy h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: clamp(52px, 10vw, 84px);
+      line-height: 0.86;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .cover-copy h2 span {
+      display: block;
+      color: var(--green);
+    }
+    .cover-copy p {
+      font-size: 15px;
+      line-height: 1.4;
+      color: var(--muted);
+      max-width: 26ch;
+      margin-bottom: 20px;
+    }
+    .cover-meta {
+      display: grid;
+      gap: 0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--green-deep);
+      max-width: 280px;
+    }
+    .cover-meta div {
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+      border-top: 1px solid var(--line);
+      padding: 9px 0;
+    }
+    .cover-meta b { font-weight: 500; color: var(--ink); }
+
+    .cover-photo {
+      position: relative;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+      padding: 8px 8px 18px 0;
+    }
+    .cover-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right bottom;
+      filter: drop-shadow(0 22px 28px rgba(20,24,20,.22));
+    }
+    .cover-photo .tag {
+      position: absolute;
+      left: 8px;
+      bottom: 18px;
+      background: var(--ink);
+      color: var(--white);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      padding: 8px 11px;
+      text-transform: uppercase;
+    }
+
+    .cover-foot {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      background: var(--green-deep);
+      color: var(--white);
+      padding: 15px 30px;
+    }
+    .cover-foot .series {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .cover-foot .series small {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      opacity: .7;
+      margin-top: 3px;
+    }
+    .cover-foot .url {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
+
+    /* ========== ABOUT ========== */
+    .about {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: var(--paper);
+    }
+    .about-top {
+      padding: 28px 30px 18px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .about-top h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 0.92;
+      text-transform: uppercase;
+      letter-spacing: -0.015em;
+    }
+    .about-top h2 span { color: var(--green); display: block; }
+    .about-top .pg {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .about-body {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 24px;
+      padding: 26px 30px;
+      min-height: 0;
+    }
+    .about-body .lead {
+      font-size: 18px;
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 14px;
+      max-width: 34ch;
+    }
+    .about-body .copy {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 42ch;
+      margin-bottom: 20px;
+    }
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .facts div {
+      background: var(--white);
+      padding: 14px 14px 12px;
+    }
+    .facts strong {
+      display: block;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      line-height: 1;
+      color: var(--green-deep);
+      margin-bottom: 4px;
+    }
+    .facts span {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .about-visual {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+      min-height: 0;
+    }
+    .about-visual figure {
+      background: #c5cec2;
+      overflow: hidden;
+      position: relative;
+      min-height: 0;
+    }
+    .about-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .about-visual figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 8px 10px;
+      background: rgba(20,24,20,.72);
+      color: #fff;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .about-foot {
+      border-top: 1px solid var(--line);
+      padding: 14px 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .about-foot b { color: var(--ink); font-weight: 500; }
+
+    /* ========== PRODUCT HERO ========== */
+    .product {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: var(--paper);
+    }
+    .product-top {
+      padding: 22px 28px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--line);
+    }
+    .product-top .kicker {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .product-top h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+    .load-badge {
+      background: var(--ink);
+      color: var(--white);
+      padding: 10px 12px;
+      text-align: center;
+      min-width: 84px;
+    }
+    .load-badge b {
+      display: block;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      line-height: 1;
+    }
+    .load-badge span {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+
+    .product-main {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      min-height: 0;
+    }
+    .product-shot {
+      background: linear-gradient(180deg, #e8ede4 0%, #d4dccf 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 10px 28px;
+      position: relative;
+      min-height: 0;
+    }
+    .product-shot img {
+      width: 92%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .swatches {
+      position: absolute;
+      left: 18px;
+      bottom: 14px;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .swatches i {
+      width: 14px; height: 14px;
+      border: 1px solid rgba(0,0,0,.2);
+      display: block;
+    }
+    .swatches span {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-left: 4px;
+    }
+
+    .product-spec {
+      padding: 20px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-left: 1px solid var(--line);
+      background: var(--white);
+    }
+    .product-spec .claim {
+      font-size: 13.5px;
+      line-height: 1.4;
+      color: var(--ink);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .spec-list { list-style: none; display: grid; gap: 0; }
+    .spec-list li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 12px;
+    }
+    .spec-list li span { color: var(--muted); }
+    .spec-list li b {
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 500;
+      font-size: 11.5px;
+      color: var(--ink);
+    }
+    .bullets {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+      margin-top: auto;
+    }
+    .bullets li {
+      font-size: 12px;
+      line-height: 1.35;
+      color: var(--green-deep);
+      padding-left: 14px;
+      position: relative;
+    }
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 6px;
+      width: 6px; height: 6px;
+      background: var(--green);
+    }
+
+    .product-foot {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      background: var(--green-deep);
+      color: var(--white);
+    }
+    .product-foot div {
+      padding: 12px 16px;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .product-foot div:last-child { border-right: 0; }
+    .product-foot small {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: .65;
+      margin-bottom: 3px;
+    }
+    .product-foot b {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    /* ========== GRID ========== */
+    .grid-page {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: var(--paper);
+    }
+    .grid-top {
+      padding: 22px 28px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--line);
+    }
+    .grid-top h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    .grid-top p {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .grid-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      min-height: 0;
+    }
+    .card {
+      background: var(--white);
+      display: grid;
+      grid-template-rows: 1fr auto;
+      min-height: 0;
+    }
+    .card .shot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px 0;
+      background: #e6ebe3;
+      min-height: 0;
+    }
+    .card .shot img {
+      width: 82%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .card .info {
+      padding: 10px 14px 12px;
+      border-top: 1px solid var(--line);
+    }
+    .card .info .name {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin-bottom: 4px;
+    }
+    .card .info .line {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .card .info .line b { color: var(--ink); font-weight: 500; }
+
+    .grid-foot {
+      padding: 12px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--ink);
+      color: var(--white);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .grid-foot .qr-hint { opacity: .7; }
+
+    @media (max-width: 860px) {
+      .cover-hero { grid-template-columns: 1fr; padding: 12px 20px 0; }
+      .cover-photo { min-height: 320px; }
+      .cover-photo img { width: 90%; transform: none; }
+      .about-body, .product-main { grid-template-columns: 1fr; }
+      .product-spec { border-left: 0; border-top: 1px solid var(--line); }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .intro, .page-label { display: none; }
+      .deck { padding: 0; max-width: none; }
+      .pages { gap: 0; }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        aspect-ratio: auto;
+        box-shadow: none;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <header class="intro">
+      <div class="eyebrow">Kontrpropozycja · kierunek TEREN</div>
+      <h1>Katalog, który wygląda jak producent — nie jak stock outdoor.</h1>
+      <p>
+        Cztery strony A4 jako punkt wyjścia: marka Elektrostatyk na pierwszym planie,
+        seria CUZO jako linia produktowa, wyłącznie realne zdjęcia studyjne i z produkcji,
+        parametry zamiast pustych haseł. Bez AI, bez „PREMIUM OUTDOOR”.
+      </p>
+      <div class="diffs">
+        <span>Bez grafik AI</span>
+        <span>Jedna hierarchia marek</span>
+        <span>Prawdziwe modele + dane</span>
+        <span>Typografia przemysłowa</span>
+      </div>
+    </header>
+
+    <div class="pages">
+      <div class="wrap">
+        <div class="page-label"><span>01 · Okładka</span><span>A4</span></div>
+        <article class="page cover">
+          <div class="cover-top">
+            <div class="brand-lockup">
+              <img src="assets/logo.svg" alt="M-Elektrostatyk" />
+            </div>
+            <div class="season">
+              Katalog produktów
+              <strong>2026 / 27</strong>
+            </div>
+          </div>
+
+          <div class="cover-hero">
+            <div class="cover-copy">
+              <h2>Sprzęt<br />terenowy<span>z Częstochowy</span></h2>
+              <p>Produkujemy fotele, łóżka i wyposażenie polowe od 1991. Sprawdzone na łowisku i w zamówieniach publicznych.</p>
+              <div class="cover-meta">
+                <div><span>Od</span><b>1991</b></div>
+                <div><span>Dla</span><b>wędkarzy · WP · PSP</b></div>
+                <div><span>Seria</span><b>CUZO</b></div>
+              </div>
+            </div>
+            <div class="cover-photo">
+              <img src="assets/f3-green-cut.png" alt="Fotel F3 CUZO Method Feeder" />
+              <div class="tag">F3 Method Feeder</div>
+            </div>
+          </div>
+
+          <footer class="cover-foot">
+            <div class="series">
+              Mały katalog wędkarski
+              <small>elektrostatyk.com · cuzo.eu</small>
+            </div>
+            <div class="url">PL / EU</div>
+          </footer>
+        </article>
+      </div>
+
+      <div class="wrap">
+        <div class="page-label"><span>02 · Producent</span><span>A4</span></div>
+        <article class="page about">
+          <div class="about-top">
+            <h2>Nie import.<span>Produkcja.</span></h2>
+            <div class="pg">02 / 08</div>
+          </div>
+          <div class="about-body">
+            <div>
+              <p class="lead">Elektrostatyk to polski producent sprzętu wędkarskiego i wyposażenia terenowego z Częstochowy.</p>
+              <p class="copy">
+                Od 1991 projektujemy konstrukcje, które mają działać na nierównym gruncie:
+                grubsze ścianki profili, regulowane nogi, mocowania osprzętu, obciążenia
+                potwierdzone w użytkowaniu rekreacyjnym i służbowym. Od 2007 dostarczamy
+                wyposażenie także dla Wojska Polskiego i Państwowej Straży Pożarnej.
+              </p>
+              <div class="facts">
+                <div><strong>1991</strong><span>Start produkcji</span></div>
+                <div><strong>2007</strong><span>Służby mundurowe</span></div>
+                <div><strong>~100</strong><span>Dystrybutorów w PL</span></div>
+                <div><strong>12</strong><span>Krajów w Europie</span></div>
+              </div>
+            </div>
+            <div class="about-visual">
+              <figure>
+                <img src="assets/finish.webp" alt="Szycie materaca w zakładzie" />
+                <figcaption>Produkcja · szycie materacy</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tech.webp" alt="Obróbka metalu" />
+                <figcaption>Obróbka · detal konstrukcji</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="about-foot">
+            <div>P.P.U.H. M-Elektrostatyk · ul. Szamotowa 16A · 42-200 Częstochowa</div>
+            <div><b>Sklep wędkarski</b> · cuzo.eu</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="wrap">
+        <div class="page-label"><span>03 · Hit sezonu</span><span>A4</span></div>
+        <article class="page product">
+          <div class="product-top">
+            <div>
+              <div class="kicker">Seria CUZO · Method Feeder</div>
+              <h2>Fotel F3</h2>
+            </div>
+            <div class="load-badge">
+              <b>120</b>
+              <span>kg obciążenie</span>
+            </div>
+          </div>
+          <div class="product-main">
+            <div class="product-shot">
+              <img src="assets/f3-green-cut.png" alt="Fotel F3 zielony" />
+              <div class="swatches">
+                <i style="background:#4f6b3e"></i>
+                <i style="background:#2f5f8a"></i>
+                <i style="background:#1d1f1e"></i>
+                <span>3 kolory</span>
+              </div>
+            </div>
+            <div class="product-spec">
+              <p class="claim">Aluminiowa rama poniżej 6,5&nbsp;kg. Osobno regulowane nogi, oparcie do pozycji leżącej, mocowania fi&nbsp;25 pod osprzęt feederowy.</p>
+              <ul class="spec-list">
+                <li><span>Głębokość</span><b>48 cm</b></li>
+                <li><span>Szerokość</span><b>46 cm</b></li>
+                <li><span>Wys. do siedziska</span><b>25–65 cm</b></li>
+                <li><span>Wys. oparcia</span><b>62 cm</b></li>
+                <li><span>Po złożeniu</span><b>70 × 25 × 75 cm</b></li>
+                <li><span>Konstrukcja</span><b>Aluminium</b></li>
+                <li><span>Materac</span><b>Poliester / pianka</b></li>
+                <li><span>Waga</span><b>≤ 6,5 kg</b></li>
+              </ul>
+              <ul class="bullets">
+                <li>Regulacja oparcia do pozycji leżącej</li>
+                <li>System mocowań z przodu i z tyłu</li>
+                <li>Opcja podnóżka</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-foot">
+            <div><small>Materiał ramy</small><b>Aluminium</b></div>
+            <div><small>Mocowania</small><b>fi 25</b></div>
+            <div><small>Zastosowanie</small><b>Feeder / teren</b></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="wrap">
+        <div class="page-label"><span>04 · Siatka modeli</span><span>A4</span></div>
+        <article class="page grid-page">
+          <div class="grid-top">
+            <h2>Wybrane modele</h2>
+            <p>Pełna oferta<br />cuzo.eu</p>
+          </div>
+          <div class="grid-body">
+            <div class="card">
+              <div class="shot"><img src="assets/f2-cut.png" alt="F2" /></div>
+              <div class="info">
+                <div class="name">F2 Method Feeder</div>
+                <div class="line"><span>Stal · 110 kg</span><b>8,7 kg</b></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="shot"><img src="assets/quantum-cut.png" alt="Quantum" /></div>
+              <div class="info">
+                <div class="name">CUZO Quantum</div>
+                <div class="line"><span>Linia flagowa</span><b>zielony / niebieski</b></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="shot"><img src="assets/vexa-cut.png" alt="VEXA" /></div>
+              <div class="info">
+                <div class="name">CUZO VEXA</div>
+                <div class="line"><span>Fotel terenowy</span><b>seria CUZO</b></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="shot"><img src="assets/enzo-cut.png" alt="Enzo" /></div>
+              <div class="info">
+                <div class="name">CUZO Enzo</div>
+                <div class="line"><span>Fotel wędkarski</span><b>seria CUZO</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-foot">
+            <span>Elektrostatyk · katalog 2026/27</span>
+            <span class="qr-hint">QR → cuzo.eu / pełna oferta</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
