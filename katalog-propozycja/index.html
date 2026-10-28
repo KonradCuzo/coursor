@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elektrostatyk × CUZO — katalog 2026/27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --void: #0b100d;
+      --forest: #1a2a1f;
+      --moss: #3d5a42;
+      --leaf: #7fa86a;
+      --mist: #e8ece4;
+      --paper: #f3f5ef;
+      --ink: #121612;
+      --mute: #6a7468;
+      --line: rgba(18, 22, 18, 0.12);
+      --glow: rgba(127, 168, 106, 0.35);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Outfit", system-ui, sans-serif;
+      background: #070a08;
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    .deck { max-width: 1200px; margin: 0 auto; padding: 36px 20px 96px; }
+    .intro {
+      color: var(--mist);
+      margin-bottom: 40px;
+      max-width: 680px;
+      animation: rise .7s ease both;
+    }
+    .intro .eyebrow {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin-bottom: 14px;
+    }
+    .intro h1 {
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+    .intro p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #b7c2b4;
+      max-width: 48ch;
+      font-weight: 300;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chips span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 11px;
+      border: 1px solid #2a382e;
+      color: #c9d5c6;
+    }
+
+    .pages { display: grid; gap: 40px; justify-items: center; }
+    .wrap { width: min(100%, 820px); }
+    .page-label {
+      display: flex; justify-content: space-between;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #7e8b7c; margin-bottom: 10px;
+    }
+
+    .page {
+      width: min(100%, 820px);
+      aspect-ratio: 210 / 297;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,.55);
+      animation: rise .8s ease both;
+    }
+    .wrap:nth-child(1) .page { animation-delay: .05s; }
+    .wrap:nth-child(2) .page { animation-delay: .12s; }
+    .wrap:nth-child(3) .page { animation-delay: .18s; }
+    .wrap:nth-child(4) .page { animation-delay: .24s; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* ================= COVER ================= */
+    .cover {
+      background: var(--void);
+      color: var(--mist);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 55% at 72% 58%, var(--glow), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 20% 20%, rgba(61,90,66,.35), transparent 60%),
+        linear-gradient(160deg, #101812 0%, #0b100d 55%, #152018 100%);
+      pointer-events: none;
+    }
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+      opacity: 0.07;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    .cover-top {
+      position: relative; z-index: 2;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 28px 30px 0;
+    }
+    .cover-top img { height: 30px; width: auto; filter: invert(1) brightness(1.05); }
+    .cover-top .year {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9aab96;
+      text-align: right;
+      line-height: 1.5;
+    }
+    .cover-top .year b {
+      display: block;
+      color: #fff;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .cover-stage {
+      position: relative; z-index: 2;
+      min-height: 0;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+    .cover-copy {
+      position: absolute;
+      z-index: 4;
+      left: 30px;
+      top: 52%;
+      transform: translateY(-42%);
+      width: min(46%, 340px);
+      pointer-events: none;
+    }
+    .cover-copy .mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin-bottom: 14px;
+    }
+    .cover-copy .mark i {
+      width: 28px; height: 1px; background: var(--leaf); display: block;
+    }
+    .cover-copy h2 {
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: clamp(52px, 10vw, 86px);
+      line-height: 0.84;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      text-shadow: 0 10px 40px rgba(0,0,0,.45);
+    }
+    .cover-copy h2 em {
+      font-style: normal;
+      color: var(--leaf);
+      display: block;
+    }
+    .cover-copy p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.45;
+      color: #c5d0c1;
+      max-width: 26ch;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 18px rgba(0,0,0,.5);
+    }
+    .cover-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 300px;
+    }
+    .cover-stats div {
+      border-top: 1px solid rgba(255,255,255,.22);
+      padding-top: 10px;
+      background: linear-gradient(90deg, rgba(11,16,13,.35), transparent);
+    }
+    .cover-stats strong {
+      display: block;
+      font-family: "Syne", sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .cover-stats span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9aab96;
+    }
+
+    .cover-product {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0 0 0 18%;
+    }
+    .cover-product .glow {
+      position: absolute;
+      width: 70%;
+      height: 55%;
+      right: 5%;
+      bottom: 8%;
+      background: radial-gradient(ellipse at center, rgba(127,168,106,.4), transparent 65%);
+      filter: blur(8px);
+      pointer-events: none;
+    }
+    .cover-product img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: 70% 100%;
+      filter: drop-shadow(0 30px 50px rgba(0,0,0,.6));
+    }
+    .cover-product .pill {
+      position: absolute;
+      z-index: 5;
+      right: 28px;
+      bottom: 22px;
+      background: var(--leaf);
+      color: var(--void);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 9px 12px;
+    }
+
+    .cover-foot {
+      position: relative; z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 30px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      background: rgba(0,0,0,.25);
+      backdrop-filter: blur(8px);
+    }
+    .cover-foot .series {
+      font-family: "Syne", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .cover-foot .series small {
+      display: block;
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: #8f9c8b;
+      margin-top: 3px;
+    }
+    .cover-foot .cta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--leaf);
+    }
+
+    /* ================= ABOUT ================= */
+    .about {
+      background: var(--paper);
+      display: grid;
+      grid-template-rows: 1.05fr 0.95fr;
+    }
+    .about-hero {
+      position: relative;
+      background: var(--forest);
+      color: var(--mist);
+      padding: 28px 30px 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      right: -8%;
+      top: -20%;
+      width: 62%;
+      height: 140%;
+      background:
+        radial-gradient(circle at 40% 50%, rgba(127,168,106,.25), transparent 55%);
+      pointer-events: none;
+    }
+    .about-hero .row {
+      position: relative; z-index: 1;
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .about-hero .kicker {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--leaf);
+    }
+    .about-hero .pg {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      color: #8a9786;
+      letter-spacing: 0.1em;
+    }
+    .about-hero h2 {
+      position: relative; z-index: 1;
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: clamp(40px, 6.6vw, 58px);
+      line-height: 0.92;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+      max-width: 12ch;
+      margin: 18px 0 auto;
+    }
+    .about-hero h2 span { color: var(--leaf); }
+    .about-hero .lead {
+      position: relative; z-index: 1;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.45;
+      color: #c5d0c1;
+      max-width: 40ch;
+    }
+
+    .about-bottom {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 0;
+    }
+    .about-facts {
+      padding: 22px 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-content: center;
+      background: var(--mist);
+    }
+    .about-facts article {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .about-facts strong {
+      display: block;
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: 34px;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+    .about-facts span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+    .about-photos {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 0;
+      min-height: 0;
+    }
+    .about-photos figure {
+      position: relative;
+      overflow: hidden;
+      min-height: 0;
+    }
+    .about-photos img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.04);
+      transition: transform 1.2s ease;
+    }
+    .about-photos figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 10px 12px;
+      background: linear-gradient(transparent, rgba(11,16,13,.8));
+      color: #fff;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ================= PRODUCT ================= */
+    .product {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: var(--mist);
+    }
+    .product-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 22px 26px 16px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .product-head .kicker {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 6px;
+    }
+    .product-head h2 {
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    .product-head .badge {
+      background: var(--void);
+      color: #fff;
+      padding: 12px 14px;
+      text-align: center;
+      min-width: 92px;
+    }
+    .product-head .badge b {
+      display: block;
+      font-family: "Syne", sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .product-head .badge span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    .product-body {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      min-height: 0;
+    }
+    .product-visual {
+      position: relative;
+      background:
+        radial-gradient(ellipse at 50% 70%, #ffffff 0%, #d9e0d4 68%, #c5cfbf 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 0;
+    }
+    .product-visual::before {
+      content: "F3";
+      position: absolute;
+      left: -4%;
+      bottom: -8%;
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: 220px;
+      letter-spacing: -0.06em;
+      color: rgba(18,22,18,.05);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .product-visual img {
+      position: relative;
+      z-index: 1;
+      width: 92%;
+      max-height: 96%;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 30px rgba(18,22,18,.18));
+    }
+    .product-visual .swatches {
+      position: absolute;
+      z-index: 2;
+      left: 18px;
+      bottom: 16px;
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+    .product-visual .swatches i {
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+    }
+    .product-visual .swatches span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mute);
+      margin-left: 4px;
+    }
+
+    .product-side {
+      background: var(--void);
+      color: var(--mist);
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .product-side .claim {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.4;
+      color: #c5d0c1;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .product-side ul {
+      list-style: none;
+      display: grid;
+      gap: 0;
+      flex: 1;
+    }
+    .product-side li {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 12px;
+    }
+    .product-side li span { color: #8a9786; }
+    .product-side li b {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 500;
+      font-size: 11px;
+      color: #fff;
+    }
+    .product-side .feats {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-top: auto;
+    }
+    .product-side .feats li {
+      border: 0;
+      padding: 0;
+      justify-content: flex-start;
+      color: var(--leaf);
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .product-side .feats li::before {
+      content: "→";
+      margin-right: 8px;
+      color: var(--leaf);
+    }
+
+    .product-band {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--forest);
+      color: #fff;
+    }
+    .product-band div {
+      padding: 14px 16px;
+      border-right: 1px solid rgba(255,255,255,.1);
+    }
+    .product-band div:last-child { border: 0; }
+    .product-band small {
+      display: block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9aab96;
+      margin-bottom: 4px;
+    }
+    .product-band b {
+      font-family: "Syne", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* ================= GRID ================= */
+    .gridpage {
+      background: var(--paper);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .grid-head {
+      padding: 22px 26px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .grid-head h2 {
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .grid-head p {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mute);
+      text-align: right;
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      grid-template-rows: 1.15fr 0.85fr;
+      gap: 10px;
+      padding: 0 16px 16px;
+      min-height: 0;
+    }
+    .tile {
+      position: relative;
+      background: var(--mist);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .tile.hero {
+      grid-row: 1 / 3;
+      background:
+        radial-gradient(ellipse at 50% 80%, #fff 0%, #d8e0d2 70%);
+    }
+    .tile.dark {
+      background: var(--forest);
+      color: #fff;
+    }
+    .tile .shot {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      padding: 12px;
+    }
+    .tile .shot img {
+      max-width: 90%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 20px rgba(0,0,0,.16));
+    }
+    .tile.dark .shot img { filter: drop-shadow(0 14px 24px rgba(0,0,0,.4)); }
+    .tile .meta {
+      padding: 12px 14px 14px;
+      border-top: 1px solid var(--line);
+    }
+    .tile.dark .meta { border-top-color: rgba(255,255,255,.12); }
+    .tile .meta .name {
+      font-family: "Syne", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .tile .meta .sub {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--mute);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .tile.dark .meta .sub { color: #9aab96; }
+    .tile .meta .sub b { color: inherit; font-weight: 500; color: var(--ink); }
+    .tile.dark .meta .sub b { color: #fff; }
+    .tile.hero .meta .name { font-size: 24px; }
+
+    .grid-foot {
+      background: var(--void);
+      color: #fff;
+      padding: 13px 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .grid-foot .accent { color: var(--leaf); }
+
+    @media (max-width: 880px) {
+      .cover-stage, .about-bottom, .product-body, .mosaic {
+        grid-template-columns: 1fr;
+      }
+      .mosaic { grid-template-rows: auto; }
+      .tile.hero { grid-row: auto; min-height: 320px; }
+      .cover-product { min-height: 340px; }
+      .cover-product img { width: 90%; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .intro, .page-label { display: none; }
+      .deck { padding: 0; }
+      .pages { gap: 0; }
+      .page {
+        width: 210mm; height: 297mm; aspect-ratio: auto;
+        box-shadow: none; page-break-after: always;
+        animation: none;
+      }
+      .cover-product img, .product-visual img { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <header class="intro">
+      <div class="eyebrow">Wersja 2 · katalog atrakcyjny · bez AI lifestyle</div>
+      <h1>Więcej charakteru. Ten sam autentyczny produkt.</h1>
+      <p>
+        Ciemny hero, duży produkt, mocna typografia Syne, accent leaf-green.
+        Nadal zero wygenerowanych jezior — atrakcyjność budujemy layoutem,
+        światłem i prawdziwymi cutoutami.
+      </p>
+      <div class="chips">
+        <span>Dark cover</span>
+        <span>Editorial product</span>
+        <span>Asymetryczna siatka</span>
+        <span>Real studio only</span>
+      </div>
+    </header>
+
+    <div class="pages">
+      <!-- COVER -->
+      <div class="wrap">
+        <div class="page-label"><span>01 · Okładka</span><span>A4</span></div>
+        <article class="page cover">
+          <div class="cover-top">
+            <img src="assets/logo.svg" alt="M-Elektrostatyk" />
+            <div class="year">Katalog produktów<strong>2026 / 27</strong></div>
+          </div>
+          <div class="cover-stage">
+            <div class="cover-product">
+              <div class="glow"></div>
+              <img src="assets/f3-green-cut.png" alt="Fotel F3 Method Feeder" />
+              <div class="pill">F3 Method Feeder</div>
+            </div>
+            <div class="cover-copy">
+              <div class="mark"><i></i> Seria CUZO</div>
+              <h2>Na łowisko.<em>Na lata.</em></h2>
+              <p>Polski producent foteli i sprzętu terenowego. Od 1991 w Częstochowie — dla wędkarzy i służb mundurowych.</p>
+              <div class="cover-stats">
+                <div><strong>35</strong><span>lat produkcji</span></div>
+                <div><strong>120</strong><span>kg max F3</span></div>
+                <div><strong>12</strong><span>krajów EU</span></div>
+              </div>
+            </div>
+          </div>
+          <footer class="cover-foot">
+            <div class="series">
+              Mały katalog wędkarski
+              <small>elektrostatyk.com · cuzo.eu</small>
+            </div>
+            <div class="cta">Otwórz ofertę →</div>
+          </footer>
+        </article>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="wrap">
+        <div class="page-label"><span>02 · Marka</span><span>A4</span></div>
+        <article class="page about">
+          <div class="about-hero">
+            <div class="row">
+              <div class="kicker">Elektrostatyk · Częstochowa</div>
+              <div class="pg">02 / 08</div>
+            </div>
+            <h2>Produkcja w PL.<span> Od 1991.</span></h2>
+            <p class="lead">Od krzesełka dla pielgrzymów do foteli feederowych i sprzętu dla Wojska oraz PSP. Ta sama zasada: mocna konstrukcja, dobra ergonomia, robione u nas w Częstochowie.</p>
+          </div>
+          <div class="about-bottom">
+            <div class="about-facts">
+              <article><strong>1991</strong><span>Start w Częstochowie</span></article>
+              <article><strong>2007</strong><span>WP i Straż Pożarna</span></article>
+              <article><strong>~100</strong><span>Dystrybutorów w PL</span></article>
+              <article><strong>12</strong><span>Krajów w Europie</span></article>
+            </div>
+            <div class="about-photos">
+              <figure>
+                <img src="assets/finish.webp" alt="Szycie materacy" />
+                <figcaption>Szycie materacy</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tech.webp" alt="Obróbka metalu" />
+                <figcaption>Obróbka konstrukcji</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PRODUCT -->
+      <div class="wrap">
+        <div class="page-label"><span>03 · Hit</span><span>A4</span></div>
+        <article class="page product">
+          <div class="product-head">
+            <div>
+              <div class="kicker">CUZO · Method Feeder</div>
+              <h2>Fotel F3</h2>
+            </div>
+            <div class="badge"><b>120</b><span>kg obciążenie</span></div>
+          </div>
+          <div class="product-body">
+            <div class="product-visual">
+              <img src="assets/f3-green-cut.png" alt="F3 zielony" />
+              <div class="swatches">
+                <i style="background:#4f6b3e"></i>
+                <i style="background:#2f5f8a"></i>
+                <i style="background:#1a1c1b"></i>
+                <span>3 kolory</span>
+              </div>
+            </div>
+            <aside class="product-side">
+              <p class="claim">Aluminium poniżej 6,5&nbsp;kg. Osobne nogi, oparcie do leżenia, mocowania fi&nbsp;25 pod osprzęt feederowy.</p>
+              <ul>
+                <li><span>Głębokość</span><b>48 cm</b></li>
+                <li><span>Szerokość</span><b>46 cm</b></li>
+                <li><span>Siedzisko</span><b>25–65 cm</b></li>
+                <li><span>Oparcie</span><b>62 cm</b></li>
+                <li><span>Złożony</span><b>70×25×75</b></li>
+                <li><span>Rama</span><b>Aluminium</b></li>
+                <li><span>Waga</span><b>≤ 6,5 kg</b></li>
+              </ul>
+              <ul class="feats">
+                <li>Oparcie do pozycji leżącej</li>
+                <li>Mocowania przód / tył</li>
+                <li>Opcjonalny podnóżek</li>
+              </ul>
+            </aside>
+          </div>
+          <div class="product-band">
+            <div><small>Rama</small><b>Aluminium</b></div>
+            <div><small>Mocowania</small><b>fi 25</b></div>
+            <div><small>Podłoże</small><b>Mud feet</b></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- MOSAIC -->
+      <div class="wrap">
+        <div class="page-label"><span>04 · Kolekcja</span><span>A4</span></div>
+        <article class="page gridpage">
+          <div class="grid-head">
+            <h2>Wybór sezonu</h2>
+            <p>Pełna oferta<br />cuzo.eu</p>
+          </div>
+          <div class="mosaic">
+            <div class="tile hero">
+              <div class="shot"><img src="assets/quantum-cut.png" alt="Quantum" /></div>
+              <div class="meta">
+                <div class="name">CUZO Quantum</div>
+                <div class="sub"><span>Linia flagowa</span><b>od 750 zł</b></div>
+              </div>
+            </div>
+            <div class="tile dark">
+              <div class="shot"><img src="assets/f2-cut.png" alt="F2" /></div>
+              <div class="meta">
+                <div class="name">F2 Feeder</div>
+                <div class="sub"><span>Stal · 110 kg</span><b>8,7 kg</b></div>
+              </div>
+            </div>
+            <div class="tile">
+              <div class="shot"><img src="assets/vexa-cut.png" alt="VEXA" /></div>
+              <div class="meta">
+                <div class="name">VEXA</div>
+                <div class="sub"><span>Terenowy</span><b>CUZO</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-foot">
+            <span>Elektrostatyk · 2026/27</span>
+            <span class="accent">QR → sklep CUZO</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
