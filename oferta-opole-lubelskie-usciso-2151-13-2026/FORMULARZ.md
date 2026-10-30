@@ -6,17 +6,17 @@ na dostawę / usługę / robotę budowlaną\* wartości szacunkowej netto nie pr
 
 ## I. Nazwa i adres Wykonawcy
 
-**CUZO Jolanta Ledwoń**  
-ul. Uczniowska 12  
-42-280 Częstochowa
+**P.P.U.H. M-ELEKTROSTATYK**  
+ul. Szamotowa 16A  
+42-200 Częstochowa
 
 | | |
 |---|---|
-| Adres poczty elektronicznej | cuzo@cuzo.eu |
-| Numer telefonu | 506 171 003 |
+| Adres poczty elektronicznej | biuro@elektrostatyk.com |
+| Numer telefonu | +48 34 324 6095 |
 | Numer faksu | nie dotyczy |
-| NIP | 5732627534 |
-| REGON | 382943659 |
+| NIP | 573-021-33-37 |
+| REGON | 150638120 |
 
 Nawiązując do zaproszenia do składania ofert na **„Zakup łóżek polowych na potrzeby ochrony ludności i obrony cywilnej”** (15 sztuk) – znak sprawy USCiSO.2151.13.2026 – oferujemy wykonanie całego zakresu zamówienia, zgodnie z załączonym szczegółowym opisem przedmiotu zamówienia.
 
@@ -26,13 +26,13 @@ Oferuję wykonanie przedmiotu zamówienia za:
 
 | | |
 |---|---|
-| **Cenę netto** | **7 560,98 zł** |
-| Słownie netto | siedem tysięcy pięćset sześćdziesiąt złotych 98/100 |
-| **Cenę brutto** | **9 300,00 zł** |
-| Słownie brutto | dziewięć tysięcy trzysta złotych 00/100 |
+| **Cenę netto** | **6 300,00 zł** |
+| Słownie netto | sześć tysięcy trzysta złotych 00/100 |
+| **Cenę brutto** | **7 749,00 zł** |
+| Słownie brutto | siedem tysięcy siedemset czterdzieści dziewięć złotych 00/100 |
 | Okres gwarancji | 24 miesiące (gwarancja producenta) |
 
-Kalkulacja: 15 szt. × 620,00 zł brutto/szt. (łóżko polowe WP5-2 z materacem) · VAT 23%.
+Kalkulacja: 15 szt. × **420,00 zł netto/szt.** (łóżko polowe WP5-2 z materacem) · VAT 23% · 516,60 zł brutto/szt.
 
 Kryterium oceny ofert: najniższa cena brutto (100% ceny); oferowany asortyment spełnia wymagania techniczne dla łóżek polowych.
 
@@ -51,7 +51,7 @@ Oświadczam, że zapoznałem/am się ze szczegółowym opisem przedmiotu zamówi
 ### Załączniki
 
 1. Specyfikacja oferowanego łóżka polowego WP5-2 z materacem (zgodność z wymaganiami technicznymi).
-2. Karta / opis produktu WP5-2 (cuzo.eu).
+2. Karta / opis produktu WP5-2 (producent: P.P.U.H. M-ELEKTROSTATYK).
 
 ---
 
@@ -59,7 +59,7 @@ Częstochowa, dnia 30.10.2026 r.
 
 …………………………………………  
 (czytelny podpis osoby uprawnionej do reprezentowania Wykonawcy)  
-**Jolanta Ledwoń — CUZO**
+**P.P.U.H. M-ELEKTROSTATYK**
 
 \* Dopuszcza się druk własny Wykonawcy z pełną treścią formularza.  
 \*\* Niepotrzebne skreślić.
